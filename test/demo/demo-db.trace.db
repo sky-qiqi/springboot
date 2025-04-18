@@ -1,0 +1,9 @@
+2025-04-09 20:24:31.704851+08:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table employees (emp_id integer not null auto_increment, salary decimal(10,2), hire_date datetime(6), phone_number varchar(20), first_name varchar(50) not null, job_title varchar(50), last_name varchar(50) not null, email varchar(100), primary key (emp_id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table employees (emp_id integer not null auto_increment, salary decimal(10,2), hire_date datetime(6), phone_number varchar(20), first_name varchar(50) not null, job_title varchar(50), last_name varchar(50) not null, email varchar(100), primary key (emp_id)) engine=InnoDB [42001-232]
+2025-04-09 20:24:31.710902+08:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEES" not found; SQL statement:
+alter table employees add constraint UKj9xgmd0ya5jmus09o0b8pqrpb unique (email) [42102-232]
+2025-04-09 20:32:22.692482+08:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEES" not found (this database is empty); SQL statement:
+select e1_0.emp_id,e1_0.email,e1_0.first_name,e1_0.hire_date,e1_0.job_title,e1_0.last_name,e1_0.phone_number,e1_0.salary from employees e1_0 where e1_0.job_title=? limit ?,? [42104-232]
